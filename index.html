@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Onboarding Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Onboarding Assistant</h1>
+      <p>Ask about new-hire onboarding and company policies</p>
+    </header>
+
+    <section class="api-key-section">
+      <div class="provider-row">
+        <div class="provider-group">
+          <label for="provider-select">Provider</label>
+          <select id="provider-select">
+            <option value="openai">OpenAI</option>
+            <option value="gemini">Gemini</option>
+          </select>
+        </div>
+        <div class="key-group">
+          <label for="api-key-input">API Key</label>
+          <input
+            id="api-key-input"
+            type="password"
+            placeholder="Paste your API key here"
+          />
+        </div>
+      </div>
+      <small>
+        Demo only. Your API key is used in this browser and is not stored, but it
+        is visible to anyone with access to this page. For production, route
+        requests through a backend server.
+      </small>
+    </section>
+
+    <main id="chat-log" class="chat-log"></main>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        id="user-input"
+        type="text"
+        autocomplete="off"
+        placeholder="Ask about onboarding or company policies..."
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
